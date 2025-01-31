@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Login">
+  <grid id="27dc6" binding="loginPanel" layout-manager="GridLayoutManager" row-count="5" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="704" height="500"/>
+    </constraints>
+    <properties>
+      <autoscrolls value="false"/>
+      <background color="-13663233"/>
+      <enabled value="true"/>
+      <foreground color="-1118482"/>
+      <maximumSize width="400" height="500"/>
+      <minimumSize width="407" height="500"/>
+      <opaque value="true"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <vspacer id="bc043">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="d6720">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="fabb0">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="bb9ed">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <grid id="43c7b" layout-manager="GridLayoutManager" row-count="12" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="50" left="30" bottom="50" right="30"/>
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-1313546"/>
+          <focusCycleRoot value="true"/>
+          <focusable value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="b90a4" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14011595"/>
+              <font size="20" style="1"/>
+              <foreground color="-14676422"/>
+              <opaque value="false"/>
+              <text value="Iniciar Sesión"/>
+            </properties>
+          </component>
+          <component id="970d7" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font size="14" style="1"/>
+              <foreground color="-6379864"/>
+              <text value="Ingresa tu email:"/>
+            </properties>
+          </component>
+          <component id="c58c7" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="300" height="35"/>
+              </grid>
+            </constraints>
+            <properties>
+              <autoscrolls value="true"/>
+              <background color="-1313546"/>
+              <focusCycleRoot value="false"/>
+              <focusTraversalPolicyProvider value="false"/>
+              <font size="14"/>
+              <foreground color="-14676422"/>
+              <margin top="2" left="6" bottom="2" right="6"/>
+              <opaque value="true"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="b4ae4" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font size="14" style="1"/>
+              <foreground color="-6379864"/>
+              <text value="Ingresa tu contraseña:"/>
+            </properties>
+          </component>
+          <vspacer id="949a4">
+            <constraints>
+              <grid row="10" column="0" row-span="1" col-span="2" vsize-policy="2" hsize-policy="1" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="20"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <component id="30ba5" class="javax.swing.JButton" binding="continuarButton" default-binding="true">
+            <constraints>
+              <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="40"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-13663233"/>
+              <borderPainted value="false"/>
+              <focusCycleRoot value="true"/>
+              <focusTraversalPolicyProvider value="false"/>
+              <focusable value="true"/>
+              <font size="14"/>
+              <foreground color="-1313546"/>
+              <opaque value="true"/>
+              <text value="Continuar"/>
+            </properties>
+          </component>
+          <vspacer id="d3450">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="2" hsize-policy="1" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="20"/>
+              </grid>
+            </constraints>
+          </vspacer>
+          <component id="f4151" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font size="12"/>
+              <foreground color="-6379864"/>
+              <text value="tus avisos, búsquedas ¡y más!"/>
+            </properties>
+          </component>
+          <component id="bb6e1" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14011595"/>
+              <font size="12"/>
+              <foreground color="-6379864"/>
+              <text value="Ingresa a tu cuenta y accede a nuestros servicos"/>
+            </properties>
+          </component>
+          <component id="e3586" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font size="28" style="1"/>
+              <foreground color="-14676422"/>
+              <text value="¡Hola, bienvenido!"/>
+            </properties>
+          </component>
+          <component id="d0b9e" class="javax.swing.JButton" binding="regresarButton" default-binding="true">
+            <constraints>
+              <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="1" use-parent-layout="false">
+                <preferred-size width="150" height="40"/>
+              </grid>
+            </constraints>
+            <properties>
+              <borderPainted value="true"/>
+              <contentAreaFilled value="false"/>
+              <focusPainted value="true"/>
+              <focusable value="false"/>
+              <font size="14" style="1"/>
+              <foreground color="-14676422"/>
+              <opaque value="false"/>
+              <text value="Regresar"/>
+            </properties>
+          </component>
+          <component id="70dd" class="javax.swing.JPasswordField" binding="passwordField2" default-binding="true">
+            <constraints>
+              <grid row="9" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="35"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1313546"/>
+              <font size="14"/>
+              <foreground color="-13663233"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
