@@ -1,3 +1,6 @@
+import database.UserDAO;
+import models.User;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,20 +18,19 @@ public class Register {
     private JCheckBox aceptoLosTérminosYCheckBox;
     private JCheckBox aceptoLaPolíticaDeCheckBox;
     private JButton createCountButton;
-    private JButton iniciaSesiónButton;
+    private JButton goLoginButton;
 
 
     public Register() {
 
         FocusUtil.disableAutoFocus(userName, userLastname, userEmail, userPassword, userPassConf);
-
         PlaceholderUtil.setPlaceholder(userName, "Ingrese su nombre");
         PlaceholderUtil.setPlaceholder(userLastname, "Ingrese su apellido");
         PlaceholderUtil.setPlaceholder(userEmail, "Ingrese su e-mail");
         PlaceholderUtil.setPlaceholder(userPassword, "Crear Contraseña");
         PlaceholderUtil.setPlaceholder(userPassConf, "Crear Constraseña");
 
-        iniciaSesiónButton.addActionListener(new ActionListener() {
+        goLoginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame currentFrame = (JFrame) SwingUtilities.getWindowAncestor(registerPanel);
@@ -45,6 +47,24 @@ public class Register {
                 frame.pack();
                 frame.setLocationRelativeTo(null);
                 frame.setVisible(true);
+            }
+        });
+
+        createCountButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                UserDAO userDAO = new UserDAO();
+                User newUser = new User(
+                        userName.getText(),
+                        userLastname.getText(),
+                        userEmail.getText(),
+                        new String(userPassword.getPassword()),
+                        true,
+                        true
+                );
+                userDAO.insertUser(newUser);
+                JOptionPane.showMessageDialog(null, "Tu registro se ha completado con éxito");
             }
         });
     }
