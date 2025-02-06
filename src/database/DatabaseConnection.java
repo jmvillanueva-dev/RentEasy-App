@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-    private static final String URL = "jdbc:sqlite:db_renteasy_app.db";
+    private static final String URL = "jdbc:sqlite:./src/SQLiteDatabase/db_renteasy_app.db";
     private static Connection connection = null;
 
     // Constructor privado para evitar instancias
