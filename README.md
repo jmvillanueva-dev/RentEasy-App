@@ -12,9 +12,10 @@ RentEasy es una aplicación de escritorio desarrollada en Java con Swing para la
 - Funcionalidad de reserva de propiedades.
 
 ## Video Explicativo
-_Agregar un enlace a un video tutorial_
+Ejemplo de uso: https://youtu.be/kqynjbb4QQk?si=zgSvJmrKRm3_uiXU
 
-[![Video Explicativo](https://youtu.be/kqynjbb4QQk?si=R-JFSpazN_TAyZb0)
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=kqynjbb4QQk)
 
 ## Instalación y Ejecución
 ### Requisitos
