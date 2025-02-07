@@ -14,10 +14,6 @@ RentEasy es una aplicación de escritorio desarrollada en Java con Swing para la
 ## 📼 Video Explicativo
 Ejemplo de uso: https://youtu.be/kqynjbb4QQk?si=zgSvJmrKRm3_uiXU
 
-
-[![Enlace video](![image](https://github.com/user-attachments/assets/b0c3798b-9bfd-41ed-a30e-6c5c48cfffcf)
-)](https://www.youtube.com/watch?v=kqynjbb4QQk)
-
 ## Instalación y Ejecución
 ### Requisitos
 - Java 11 o superior
