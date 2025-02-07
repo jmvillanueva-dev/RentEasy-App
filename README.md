@@ -1,9 +1,9 @@
-# RentEasy - Sistema de Gestión de Propiedades en Alquiler
+# 🖥️ RentEasy - Sistema de Gestión de Propiedades en Alquiler
 
-## Descripción
+## 📑 Descripción
 RentEasy es una aplicación de escritorio desarrollada en Java con Swing para la gestión de propiedades en alquiler. La plataforma permite a los propietarios registrar y administrar sus propiedades, mientras que los arrendatarios pueden buscar propiedades disponibles y realizar reservas.
 
-## Características Principales
+## 📝 Características Principales
 - Registro y administración de propiedades.
 - Edición y eliminación de propiedades.
 - Búsqueda de propiedades con filtros de precio, ciudad y tipo.
@@ -11,18 +11,19 @@ RentEasy es una aplicación de escritorio desarrollada en Java con Swing para la
 - Gestión de perfiles para propietarios y arrendatarios.
 - Funcionalidad de reserva de propiedades.
 
-## Video Explicativo
+## 📼 Video Explicativo
 Ejemplo de uso: https://youtu.be/kqynjbb4QQk?si=zgSvJmrKRm3_uiXU
 
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=kqynjbb4QQk)
+[![Enlace video](![image](https://github.com/user-attachments/assets/b0c3798b-9bfd-41ed-a30e-6c5c48cfffcf)
+)](https://www.youtube.com/watch?v=kqynjbb4QQk)
 
 ## Instalación y Ejecución
 ### Requisitos
 - Java 11 o superior
 - IDE compatible con Java (IntelliJ IDEA, Eclipse, NetBeans, etc.)
 
-### Instalación
+### 💿 Instalación
 1. Clonar el repositorio:
    ```sh
    git clone https://github.com/jmvillanueva-dev/RentEasy-App.git
@@ -31,7 +32,7 @@ Ejemplo de uso: https://youtu.be/kqynjbb4QQk?si=zgSvJmrKRm3_uiXU
 3. Configurar la base de datos (ver sección siguiente).
 4. Ejecutar la aplicación desde `Main.java`.
 
-## Base de Datos
+## 🗂️ Base de Datos
 ### Creación de la Tabla `properties`
 ```sql
 CREATE TABLE IF NOT EXISTS user_roles (
@@ -115,7 +116,7 @@ CREATE TABLE IF NOT EXISTS reservations (
 
 ```
 
-## Dependencias
+## 🗄️ Dependencias
 La aplicación utiliza las siguientes bibliotecas y dependencias:
 - **Swing** - Para la interfaz gráfica.
 - **SQL Connector** - Para la conexión con la base de datos SQL.
@@ -123,7 +124,7 @@ La aplicación utiliza las siguientes bibliotecas y dependencias:
 - **JTable** - Para la visualización de propiedades en tablas.
 - **jbcrypt** - Para encriptación de contraseñas.
 
-## Capturas de Pantalla
+## 🗄️ Capturas de Pantalla
 
 **Venta de Bienvenida**
 ![image](https://github.com/user-attachments/assets/dc7124af-9057-4050-8007-4eeaea6ece7b)
@@ -180,12 +181,12 @@ La aplicación utiliza las siguientes bibliotecas y dependencias:
 
 
 
-## Contribuciones
+## ✍️ Contribuciones
 Las contribuciones son bienvenidas. Si deseas mejorar la aplicación, por favor realiza un fork del repositorio y envía un pull request con tus cambios.
 
 ## Licencia
 Este proyecto está bajo la Licencia MIT. Para más información, consulta el archivo `LICENSE`.
 
-## Contacto
+## 👨🏽‍💻 Contacto
 Para cualquier consulta o sugerencia, por favor contacta a: [@jmvillanueva-dev](mailto:jhonny.villanueva@epn.edu.ec).
 
