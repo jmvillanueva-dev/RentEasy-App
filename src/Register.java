@@ -79,21 +79,21 @@ public class Register {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (isFieldEmpty(userName, "Ingrese su nombre*") ||
-                        isFieldEmpty(userLastname, "Ingrese su apellido") ||
+                        isFieldEmpty(userLastname, "Ingrese su apellido*") ||
                         isFieldEmpty(userEmail, "Ingrese su e-mail*") ||
                         isFieldEmpty(userPassword, "Crear Contraseña") ||
                         isFieldEmpty(userPassConf, "Crear Constraseña")) {
-                    JOptionPane.showMessageDialog(null, "Por favor, completa todos los campos.");
+                    JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos.");
                     return;
                 }
 
                 if (!ownerRadioButton.isSelected() && !tenantRadioButton.isSelected()) {
-                    JOptionPane.showMessageDialog(null, "Por favor, selecciona al menos una actividad.");
+                    JOptionPane.showMessageDialog(null, "Por favor, seleccione al menos una actividad.");
                     return;
                 }
 
                 if (!acceptTermsCheckBox.isSelected() || !acceptPolicyDeCheckBox.isSelected()) {
-                    JOptionPane.showMessageDialog(null, "Por favor, acepta los términos y la política de privacidad.");
+                    JOptionPane.showMessageDialog(null, "Por favor, acepte los términos y la política de privacidad.");
                     return;
                 }
 
@@ -111,8 +111,16 @@ public class Register {
                         true,
                         true
                 );
-                userDAO.insertUser(newUser);
-                JOptionPane.showMessageDialog(null, "Te has registrado con éxito, ahora puedes usar nuestros servicios.");
+                newUser.setOwner(ownerRadioButton.isSelected());
+                newUser.setTenant(tenantRadioButton.isSelected());
+                boolean registrationSuccess = userDAO.insertUser(newUser);
+
+                if (registrationSuccess) {
+                    JOptionPane.showMessageDialog(null, "Te has registrado con éxito, ahora puedes usar nuestros servicios.");
+                    resetFormFields();
+                } else {
+                    JOptionPane.showMessageDialog(null, "El correo electrónico ya está registrado. Por favor, utiliza otro.");
+                }
             }
         });
     }
@@ -132,20 +140,41 @@ public class Register {
     private void validatePasswords() {
         String password = new String(userPassword.getPassword());
         String confirmPassword = new String(userPassConf.getPassword());
+        Color greenCustom = Color.decode("#8FD14F");
 
         if (password.isEmpty() || confirmPassword.isEmpty()) {
             resultVertification.setText("");
             resultVertification2.setText("");
         } else if (password.equals(confirmPassword)) {
             resultVertification.setText("OK");
-            resultVertification.setForeground(Color.GREEN);
+            resultVertification.setForeground(greenCustom);
             resultVertification2.setText("OK");
-            resultVertification2.setForeground(Color.GREEN);
+            resultVertification2.setForeground(greenCustom);
         } else {
             resultVertification.setText("X");
             resultVertification.setForeground(Color.RED);
             resultVertification2.setText("X");
             resultVertification2.setForeground(Color.RED);
         }
+    }
+
+    private void resetFormFields() {
+        userName.setText("");
+        userLastname.setText("");
+        userEmail.setText("");
+        userPassword.setText("");
+        userPassConf.setText("");
+        resultVertification.setText("");
+        resultVertification2.setText("");
+        ownerRadioButton.setSelected(false);
+        tenantRadioButton.setSelected(false);
+        acceptTermsCheckBox.setSelected(false);
+        acceptPolicyDeCheckBox.setSelected(false);
+
+        PlaceholderUtil.setPlaceholder(userName, "Ingrese su nombre*");
+        PlaceholderUtil.setPlaceholder(userLastname, "Ingrese su apellido*");
+        PlaceholderUtil.setPlaceholder(userEmail, "Ingrese su e-mail*");
+        PlaceholderUtil.setPlaceholder(userPassword, "Crear Contraseña*");
+        PlaceholderUtil.setPlaceholder(userPassConf, "Crear Constraseña*");
     }
 }

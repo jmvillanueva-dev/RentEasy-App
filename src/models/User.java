@@ -9,6 +9,8 @@ public class User {
     private String password;
     private boolean acceptedPrivacyPolicy;
     private boolean acceptedTermsAndConditions;
+    private boolean isOwner;
+    private boolean isTenant;
 
     // Constructor
     public User(String username, String lastname, String email, String password, boolean acceptedPrivacyPolicy, boolean acceptedTermsAndConditions) {
@@ -41,4 +43,11 @@ public class User {
 
     public boolean isAcceptedTermsAndConditions() { return acceptedTermsAndConditions; }
     public void setAcceptedTermsAndConditions(boolean acceptedTermsAndConditions) { this.acceptedTermsAndConditions = acceptedTermsAndConditions; }
+
+    public boolean isOwner() { return isOwner; }
+    public void setOwner(boolean owner) { isOwner = owner; }
+
+    public boolean isTenant() { return isTenant; }
+    public void setTenant(boolean tenant) { isTenant = tenant; }
+
 }

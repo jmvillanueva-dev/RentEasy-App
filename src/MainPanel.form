@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="MainPanel">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1146" height="891"/>
+    </constraints>
+    <properties>
+      <minimumSize width="1020" height="800"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <tabbedpane id="a6c3d" binding="tabbedPane">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="200"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="6992c" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="RentEasy | Propietarios"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="b40e6" binding="owenerPanel" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-1"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <tabbedpane id="5c3b5" binding="owContratos">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="200" height="200"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <grid id="11254" binding="owPropiedades" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <tabbedpane title="Propiedades"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <grid id="f0ebb" layout-manager="GridLayoutManager" row-count="3" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="20" left="90" bottom="20" right="90"/>
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none" title="Crear una nueva publicación"/>
+                            <children>
+                              <component id="d933e" class="javax.swing.JButton" binding="registerProperty">
+                                <constraints>
+                                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="4" fill="0" indent="0" use-parent-layout="false">
+                                    <preferred-size width="129" height="30"/>
+                                  </grid>
+                                </constraints>
+                                <properties>
+                                  <text value="Publicar Propiedad"/>
+                                </properties>
+                              </component>
+                              <grid id="b46bd" layout-manager="GridLayoutManager" row-count="9" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                                <margin top="20" left="20" bottom="20" right="20"/>
+                                <constraints>
+                                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties/>
+                                <border type="none" title="Compeletar todos los campos ( * )"/>
+                                <children>
+                                  <component id="cc336" class="javax.swing.JLabel">
+                                    <constraints>
+                                      <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Ingrese un titulo para la publicación *:"/>
+                                    </properties>
+                                  </component>
+                                  <component id="418a2" class="javax.swing.JTextField" binding="titleProperty">
+                                    <constraints>
+                                      <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                                        <preferred-size width="490" height="30"/>
+                                      </grid>
+                                    </constraints>
+                                    <properties>
+                                      <font size="14"/>
+                                      <margin top="2" left="6" bottom="2" right="6"/>
+                                      <toolTipText value="Ingrese el título para el anuncio"/>
+                                    </properties>
+                                  </component>
+                                  <component id="37116" class="javax.swing.JLabel">
+                                    <constraints>
+                                      <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Tipo de inmueble*:"/>
+                                    </properties>
+                                  </component>
+                                  <component id="2d2c0" class="javax.swing.JLabel">
+                                    <constraints>
+                                      <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Precio por noche (USD)*:"/>
+                                    </properties>
+                                  </component>
+                                  <component id="7f0e7" class="javax.swing.JComboBox" binding="propertyTypeCbox">
+                                    <constraints>
+                                      <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                                        <preferred-size width="240" height="30"/>
+                                      </grid>
+                                    </constraints>
+                                    <properties>
+                                      <font size="12"/>
+                                      <model>
+                                        <item value="- Selecciona una opción -"/>
+                                        <item value="Habitación"/>
+                                        <item value="Casa"/>
+                                        <item value="Departamento"/>
+                                        <item value="Cabaña"/>
+                                      </model>
+                                      <name value=""/>
+                                      <toolTipText value="Seleccione el tipo de inmueble"/>
+                                    </properties>
+                                  </component>
+                                  <component id="ab387" class="javax.swing.JTextField" binding="pricePerNight">
+                                    <constraints>
+                                      <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                                        <preferred-size width="240" height="30"/>
+                                      </grid>
+                                    </constraints>
+                                    <properties>
+                                      <font size="14"/>
+                                      <margin top="2" left="6" bottom="2" right="6"/>
+                                      <toolTipText value="Ingrese el valor en USD por noche"/>
+                                    </properties>
+                                  </component>
+                                  <component id="8216b" class="javax.swing.JLabel">
+                                    <constraints>
+                                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                                        <preferred-size width="180" height="-1"/>
+                                      </grid>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Número de habitaciones*:"/>
+                                    </properties>
+                                  </component>
+                                  <component id="5a506" class="javax.swing.JLabel">
+                                    <constraints>
+                                      <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                                        <preferred-size width="140" height="-1"/>
+                                      </grid>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Cantidad Máx. Personas*:"/>
+                                    </properties>
+                                  </component>
+                                  <component id="9054c" class="javax.swing.JSpinner" binding="roomsQtySpinner">
+                                    <constraints>
+                                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                                        <preferred-size width="40" height="30"/>
+                                      </grid>
+                                    </constraints>
+                                    <properties>
+                                      <font size="14"/>
+                                      <toolTipText value="Número de habitaciones disponibles"/>
+                                    </properties>
+                                  </component>
+                                  <component id="473f9" class="javax.swing.JSpinner" binding="maxPeopleSpinner">
+                                    <constraints>
+                                      <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                                        <preferred-size width="40" height="30"/>
+                                      </grid>
+                                    </constraints>
+                                    <properties>
+                                      <font size="14"/>
+                                      <toolTipText value="Capacidad máx del inmueble"/>
+                                    </properties>
+                                  </component>
+                                  <component id="4368b" class="javax.swing.JComboBox" binding="countryPropertyCbox">
+                                    <constraints>
+                                      <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                                        <preferred-size width="240" height="30"/>
+                                      </grid>
+                                    </constraints>
+                                    <properties>
+                                      <font size="12"/>
+                                      <model>
+                                        <item value="- Selecciona un País -"/>
+                                        <item value="Ecuador"/>
+                                        <item value="Colombia"/>
+                                        <item value="Perú"/>
+                                      </model>
+                                      <toolTipText value="Seleccion el País"/>
+                                    </properties>
+                                  </component>
+                                  <component id="3dbb3" class="javax.swing.JComboBox" binding="cityPropertyCbox">
+                                    <constraints>
+                                      <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                                        <preferred-size width="240" height="30"/>
+                                      </grid>
+                                    </constraints>
+                                    <properties>
+                                      <font size="12"/>
+                                      <model>
+                                        <item value="- Selecciona una Ciudad -"/>
+                                        <item value="Quito"/>
+                                        <item value="Guayaquil"/>
+                                        <item value="Cuenca"/>
+                                        <item value="Manta"/>
+                                        <item value="Ambato"/>
+                                        <item value="Esmeraldas"/>
+                                        <item value="Portoviejo"/>
+                                        <item value="Manta"/>
+                                        <item value="Esmeraldas"/>
+                                        <item value="Pedernales"/>
+                                        <item value="Montañita"/>
+                                        <item value="Lago Agrio"/>
+                                        <item value="Macas"/>
+                                      </model>
+                                      <toolTipText value="Seleccione la ciudad"/>
+                                    </properties>
+                                  </component>
+                                  <component id="e05cc" class="javax.swing.JLabel">
+                                    <constraints>
+                                      <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                                    </constraints>
+                                    <properties>
+                                      <text value="Ingrese la ubicación de la propiedad*:"/>
+                                    </properties>
+                                  </component>
+                                  <component id="86691" class="javax.swing.JTextField" binding="addressProperty">
+                                    <constraints>
+                                      <grid row="8" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                                        <preferred-size width="490" height="30"/>
+                                      </grid>
+                                    </constraints>
+                                    <properties>
+                                      <font size="14"/>
+                                      <margin top="2" left="6" bottom="2" right="6"/>
+                                      <toolTipText value="Ingrese la ubicación del inmueble"/>
+                                    </properties>
+                                  </component>
+                                </children>
+                              </grid>
+                              <hspacer id="6c2c1">
+                                <constraints>
+                                  <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                              </hspacer>
+                              <hspacer id="e491d">
+                                <constraints>
+                                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                              </hspacer>
+                            </children>
+                          </grid>
+                          <grid id="23efe" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints>
+                              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties/>
+                            <border type="none" title="Propiedades publicadas"/>
+                            <children>
+                              <scrollpane id="a0ba5">
+                                <constraints>
+                                  <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties/>
+                                <border type="none" title="Mis Propiedades"/>
+                                <children>
+                                  <component id="e22a8" class="javax.swing.JTable" binding="seeProperties">
+                                    <constraints/>
+                                    <properties/>
+                                  </component>
+                                </children>
+                              </scrollpane>
+                              <component id="bd7b8" class="javax.swing.JButton" binding="deletePropertyButton">
+                                <constraints>
+                                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <background color="-1159602"/>
+                                  <foreground color="-1"/>
+                                  <text value="Eliminar Publicación"/>
+                                </properties>
+                              </component>
+                              <component id="b4ca0" class="javax.swing.JButton" binding="editPropertyButton">
+                                <constraints>
+                                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="1" use-parent-layout="false"/>
+                                </constraints>
+                                <properties>
+                                  <text value="Editar publicación"/>
+                                </properties>
+                              </component>
+                            </children>
+                          </grid>
+                        </children>
+                      </grid>
+                      <grid id="180f1" binding="owNotificaciones" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <tabbedpane title="Notificaciones"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                      <grid id="d193d" binding="owPerfil" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <tabbedpane title="Perfil"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                      <grid id="36bd2" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <tabbedpane title="Contratos"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                    </children>
+                  </tabbedpane>
+                  <component id="7de88" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font size="18" style="1"/>
+                      <text value="Panel Administrador de Propiedades"/>
+                    </properties>
+                  </component>
+                  <component id="1fe98" class="javax.swing.JButton" binding="logoutButton">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="1" use-parent-layout="false">
+                        <preferred-size width="-1" height="30"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-13663233"/>
+                      <foreground color="-1"/>
+                      <text value="Cerrar Sesión"/>
+                    </properties>
+                  </component>
+                  <component id="3c477" class="javax.swing.JButton" binding="editProfileButton">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="Editar Perfil"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="d7f83" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="RentEasy | Clientes"/>
+            </constraints>
+            <properties>
+              <visible value="false"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="bbc2" binding="tenantPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+    </children>
+  </grid>
+</form>
