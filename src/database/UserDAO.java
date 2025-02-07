@@ -3,6 +3,8 @@ package database;
 import models.User;
 import utils.PasswordUtil;
 import java.sql.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class UserDAO {
 
@@ -137,6 +139,46 @@ public class UserDAO {
             DatabaseConnection.closeConnection();
         }
         return -1;
+    }
+
+    // Metodo para obtener el rol de usuario
+    public String getUserRole(int userId) {
+        String query = "SELECT role_assignment FROM user_roles WHERE userId = ?";
+        try (
+                Connection connection = DatabaseConnection.getConnection();
+                PreparedStatement stmt = connection.prepareStatement(query)
+        ) {
+            stmt.setInt(1, userId);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return rs.getString("role_assignment");
+            }
+        } catch (SQLException e) {
+            System.err.println("Error al obtener el rol del usuario: " + e.getMessage());
+        } finally {
+            DatabaseConnection.closeConnection();
+        }
+        return null; // Retorna null si no se encuentra el rol
+    }
+
+    public Map<String, String> getOwnerProfile(int userId) {
+        Map<String, String> profileData = new HashMap<>();
+        String query = "SELECT name, lastname, phone_number FROM owners WHERE user_id = ?";
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setInt(1, userId);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                profileData.put("name", rs.getString("name"));
+                profileData.put("lastname", rs.getString("lastname"));
+                profileData.put("phone_number", rs.getString("phone_number"));
+            }
+        } catch (SQLException e) {
+            System.err.println("Error al obtener el perfil del propietario: " + e.getMessage());
+        } finally {
+            DatabaseConnection.closeConnection();
+        }
+        return profileData;
     }
 }
 

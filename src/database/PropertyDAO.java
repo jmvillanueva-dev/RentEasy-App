@@ -5,6 +5,8 @@ import models.Property;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PropertyDAO {
 
@@ -153,5 +155,101 @@ public class PropertyDAO {
             DatabaseConnection.closeConnection();
         }
     }
+
+    public List<Property> filterProperties(String minPrice, String maxPrice, String city, String propertyType) {
+        List<Property> filteredProperties = new ArrayList<>();
+        StringBuilder queryBuilder = new StringBuilder("SELECT * FROM properties WHERE ");
+        List<String> conditions = new ArrayList<>();
+        List<Object> parameters = new ArrayList<>();
+
+        if (!minPrice.equals("0")) {
+            conditions.add("price >= ?");
+            parameters.add(Double.parseDouble(minPrice));
+        }
+        if (!maxPrice.equals("99999999")) {
+            conditions.add("price <= ?");
+            parameters.add(Double.parseDouble(maxPrice));
+        }
+        if (!city.isEmpty()) {
+            conditions.add("city LIKE ?");
+            parameters.add("%" + city + "%");
+        }
+        if (!propertyType.isEmpty()) {
+            conditions.add("property_type LIKE ?");
+            parameters.add("%" + propertyType + "%");
+        }
+
+        // Si no hay condiciones, devolver todo sin filtrar
+        if (conditions.isEmpty()) {
+            queryBuilder.append("1=1"); // Selecciona todas las propiedades
+        } else {
+            queryBuilder.append(String.join(" OR ", conditions)); // Usa OR para filtrar al menos por un criterio
+        }
+
+        try (
+                Connection connection = DatabaseConnection.getConnection();
+                PreparedStatement statement = connection.prepareStatement(queryBuilder.toString())
+        ) {
+            for (int i = 0; i < parameters.size(); i++) {
+                statement.setObject(i + 1, parameters.get(i));
+            }
+
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                Property property = new Property(
+                        resultSet.getInt("id"),
+                        resultSet.getInt("owner_id"),
+                        resultSet.getString("title"),
+                        resultSet.getString("city"),
+                        resultSet.getString("country"),
+                        resultSet.getDouble("price"),
+                        resultSet.getString("property_type"),
+                        resultSet.getInt("rooms"),
+                        resultSet.getInt("max_people"),
+                        resultSet.getString("address")
+                );
+                filteredProperties.add(property);
+            }
+        } catch (SQLException e) {
+            System.err.println("Error al filtrar las propiedades: " + e.getMessage());
+        } finally {
+            DatabaseConnection.closeConnection();
+        }
+        return filteredProperties;
+    }
+
+
+    public List<Property> getAllProperties() {
+        List<Property> allProperties = new ArrayList<>();
+        String query = "SELECT * FROM properties";
+        try (
+                Connection connection = DatabaseConnection.getConnection();
+                PreparedStatement statement = connection.prepareStatement(query)
+        ) {
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                Property property = new Property(
+                        resultSet.getInt("id"),
+                        resultSet.getInt("owner_id"),
+                        resultSet.getString("title"),
+                        resultSet.getString("city"),
+                        resultSet.getString("country"),
+                        resultSet.getDouble("price"),
+                        resultSet.getString("property_type"),
+                        resultSet.getInt("rooms"),
+                        resultSet.getInt("max_people"),
+                        resultSet.getString("address")
+                );
+                allProperties.add(property);
+            }
+        } catch (SQLException e) {
+            System.err.println("Error al obtener todas las propiedades: " + e.getMessage());
+        } finally {
+            DatabaseConnection.closeConnection();
+        }
+        return allProperties;
+    }
+
+
 
 }
