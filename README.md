@@ -134,7 +134,7 @@ La aplicación utiliza las siguientes bibliotecas y dependencias:
 
 
 **Ventana de Inicio de Sesion**
-![image](https://github.com/user-attachments/assets/50ddfdad-9453-468d-9b94-72f602a6abc4)
+![image](https://github.com/user-attachments/assets/c7a21897-b6db-482b-93fa-34426b2d0c4a)
 ![image](https://github.com/user-attachments/assets/2a29b25f-e7cd-4930-a075-59431534abcd)
 
 
